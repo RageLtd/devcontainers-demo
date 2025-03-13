@@ -1,0 +1,8 @@
+{
+	"name": "devcontainer-backend",
+	"image": "golang:latest",
+	"forwardPorts": [8080],
+	"workspaceFolder": "/workspace/backend",
+	"workspaceMount": "source=${localWorkspaceFolder}/backend,target=/workspace/backend,type=bind",
+	"runArgs": ["--name", "devcontainer-backend"]
+}

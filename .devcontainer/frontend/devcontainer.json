@@ -1,0 +1,13 @@
+{
+	"name": "devcontainer-frontend",
+	"image": "oven/bun:latest",
+	"forwardPorts": [9090],
+	"workspaceFolder": "/workspace/frontend",
+	"workspaceMount": "source=${localWorkspaceFolder}/frontend,target=/workspace/frontend,type=bind",
+	"postCreateCommand": "bun install",
+	"containerEnv": {
+		"VITE_API_URL": "https://devcontainer-backend.orb.local",
+		"PORT": "9090"
+	},
+	"runArgs": ["--name", "devcontainer-frontend"]
+}
